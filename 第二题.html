@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			arr.reduce(callback,[initialValue])
+//			callback （执行数组中每个值的函数，包含四个参数）
+//			previousValue （上一次调用回调返回的值，或者是提供的初始值（initialValue））
+//			currentValue （数组中当前被处理的元素）
+//			index （当前元素在数组中的索引）
+//			array （调用 reduce 的数组）
+//			initialValue （作为第一次调用 callback 的第一个参数。）
+			var items=[1,2,3,4];
+			function add(pre,value){
+				return pre+value;
+			}
+			var result=items.reduce(add,10);
+			console.log(result)//20
+			
+			console.log([3,2,1].reduce(Math.pow));//9 3的平方等于9 9的一次方等于1
+//			console.log([].reduce(Math.pow));//error
+//			pow方法可以返回x的y次幂
+//			[3,2,1].reduce(Math.pow)等同于下面的方法
+			function fun(x,y){
+				console.info(x+":"+y); //1
+				return (Math.pow(x,y));
+			}
+			console.info([1,2,3].reduce(fun));
+			
+			
+			//进阶demo
+			var items=[1,2,3];
+			function func(obj,currentVal){
+				return obj.value+currentVal;
+			}
+			var result=items.reduce(func,{value:10});
+			console.log(result);//{value:16}
+			
+			var items=[2,3,4];
+			function func(obj,currentVal){
+				obj.value=obj.value+currentVal;
+				return obj;
+			}
+			var result=items.reduce(func,{value:12});
+			console.log(result);//{value:21}
+		</script>
+	</body>
+</html>

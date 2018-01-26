@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function foo(a){
+				var a;
+				return a;
+			}
+			function bar(a){
+				var a='bye';
+				return a;
+			}
+			console.log(foo('hello')); //hello
+			console.log(bar('hello')) //bar
+			
+			var a=new Date('2014-3-2');
+			var b=new Date(2014,03,02);
+			console.log(a); //Sun Mar 02 2014 00:00:00 GMT+0800 (中国标准时间)
+			console.log(b)//Wed Apr 02 2014 00:00:00 GMT+0800 (中国标准时间)
+//			getDay返回一个0（周日)到6（周六)之间的整数
+			console.log(a.getMonth())//2
+			console.log(b.getMonth())//3
+			console.log(a.getDay())//0
+			console.log(b.getDay())//3
+			console.log(a.getDate());//2
+			console.log(b.getDate());//2
+			
+		</script>
+	</body>
+</html>
+<!--参考链接：http://www.dreamdu.com/javascript/object_date/-->

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fun(){
+				var x=y=1;
+			}
+			fun();
+			console.log(x);// x is not defined
+			console.log(y);// 1
+			
+//			y被赋值到全局变量,x是局部变量
+		</script>
+	</body>
+</html>

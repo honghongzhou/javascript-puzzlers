@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var min=Math.min();
+			var max=Math.max();
+			console.log(min<max);//false
+			
+//			解释:Math.min方法可以是0个或者多个参数，当为多个参数时，会返回最小值，但是当为0个参数时，返回的是Infinity
+//Infinity表示无穷大，而此时，参数为0，Math.max方法返回-Infinity
+		</script>
+	</body>
+</html>

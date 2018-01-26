@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//parseInt
+			console.log(parseInt(11));//11 默认为10进制数
+			console.log(parseInt(11,2));//3 将2进制11转化为10进制数
+			//map
+			//array1.map(callbackfn[, thisArg])
+			//arr.map(function(indexValue,index array){})
+			var numbers=[1,2,3];
+			function changeNumbers(num,index,arr){
+				console.log(arr) //[1,2,3]
+				return num*2;
+			}
+			console.log(numbers.map(changeNumbers)); //[2,4,6]
+			
+			console.log(["1","2","3"].map(parseInt));//[1,NAN,NAN]
+			console.log(parseInt(1,0));//1
+			console.log(parseInt(2,1));//NAN
+			console.log(parseInt(3,2));//NAN
+			
+			//map的thisArg的用法
+			var obj={
+				objValue:10,
+				getValue:function(value){
+					return value*this.objValue;
+				}
+			}
+			var numbers=[3,4,5];
+			console.log(numbers.map(obj.getValue,obj))//[30,40,50]
+			//与前面的parseInt相似，内置的javascript方法作为回调函数
+			console.log([4,9,16].map(Math.sqrt));//[2,3,4] 传递参数value Index array给Math.sqrt
+		</script>
+	</body>
+</html>

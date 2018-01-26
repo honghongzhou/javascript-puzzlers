@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log(1<2<3); //true
+			console.log( 3 < 2 < 1)//true
+			
+//			其实这道题是这样的
+//			1<2 为 true  true<3也就是判断1<3 true
+//			3<2 为 false  false<1 也就是判断0<1 true
+
+			console.log(3.toString());//error
+			console.log(3..toString()); //3
+			console.log(3...toString())//error
+			
+//			这道题的解释是这样的:
+//			参考链接:http://www.zuojj.com/archives/888.html
+		</script>
+	</body>
+</html>
